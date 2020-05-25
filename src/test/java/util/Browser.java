@@ -10,10 +10,10 @@ public class Browser {
     @BeforeTest
     public static WebDriver openBrowser(WebDriver dr, String browser, String url){
         if (browser.equals("chrome")){
-            System.setProperty("webdriver.chrome.driver", "/Users/jjmao/Documents/#MyPractice/selenium3Auto/chromedriver");
+            System.setProperty("webdriver.chrome.driver", "./chromedriver");
             dr = new ChromeDriver();
         } else if (browser.equals("firefox")){
-            System.setProperty("webdriver.firefox.driver", "/Users/jjmao/Documents/#MyPractice/selenium3Auto/geckodriver");
+            System.setProperty("webdriver.firefox.driver", "./geckodriver");
             dr = new FirefoxDriver();
         } else {
             System.out.println("Browser is not supported.");
